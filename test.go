@@ -1,6 +1,6 @@
 package main
 
-import "learn/patterns/singleton"
+import "learn/worker_pools"
 
 func main() {
 	// NOTE: decorator
@@ -46,5 +46,18 @@ func main() {
 	//fmt.Println(context.Execute(1, 2))
 
 	//NOTE: singleton
-	singleton.Execute()
+	//singleton.Execute()
+
+	//NOTE: go routine
+	//go sampleRoutine()
+	//fmt.Println("Started Main")
+	//time.Sleep(500 * time.Millisecond)
+	//fmt.Println("Finished Main")
+
+	//NOTE: worker pool
+	worker_pools.Run()
 }
+
+//func sampleRoutine() {
+//	fmt.Println("Inside Sample Goroutine")
+//}
